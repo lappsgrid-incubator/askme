@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  main:
+    container_name: askme_main
+    image: askme:v1
+    stdin_open: true
+    tty: true
+    ports:
+      - "3000:3000"
+      - "15672:15672"
+
+  elastic:
+    container_name: askme_elastic
+    image: elastic:v1
+    user: elasticsearch
+    volumes:
+      - "/Users/Shared/data/elasticsearch/data:/data"
+    expose:
+      - "9200"

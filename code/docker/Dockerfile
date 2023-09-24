@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk
 
-# We need git, wget and rabbitmq. In the future we may want top add Maven so we can
+# We need git, wget and rabbitmq. In the future we may want to add Maven so we can
 # build straight from Git repositories. The tree command is there for debugging
 # convenience only. 
 RUN apt-get update && apt-get install -y \
